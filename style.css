@@ -1,3 +1,23 @@
 .texto-menor {
     font-size: 13px;
 }
+
+.div-facilidades {
+width: 325px;
+}
+.div-novidades {
+    width: 325px;
+}
+/* responsividade, se a tela tiver min 768 a largura passa a ser 696*/
+@media(min-width: 768px) {
+
+    .div-novidades {
+        width: 696px;
+    }
+}
+.cor-icon{
+    color: #DAFF01;
+}
+.cor-lilas{
+    background-color:#9353FF;
+}
