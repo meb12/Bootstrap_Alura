@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -22,7 +22,9 @@
         <div class="container-fluid">
             <!-- d-block tira as margens -->
             <!-- cria um h1(questoes de marketing, qnd for procurar no google aparece o que tem no h1) e dentro dele coloca a imagem de logo -->
-            <a class="navbar-brand" href="#"><h1 class="m-0"><img class="d-block" src="./assets/logo-meteora.png" alt="logo meteora"></h1></a>
+            <a class="navbar-brand" href="#">
+                <h1 class="m-0"><img class="d-block" src="./assets/logo-meteora.png" alt="logo meteora"></h1>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -45,8 +47,10 @@
                 </ul>
                 <form class="d-flex" role="search">
                     <!-- rounded-0 tira o arredondamento -->
-                    <input class="form-control me-2 rounded-0" type="search" placeholder="Digite o produto" aria-label="Search">
-                   <!--btn-outline-cor  -->
+                    <!-- aria-label ajuda os leitores de tela,  -->
+                    <input class="form-control me-2 rounded-0" type="search" placeholder="Digite o produto"
+                        aria-label="Procurar">
+                    <!--btn-outline-cor  -->
                     <button class="btn btn-outline-light rounded-0" type="submit">Buscar</button>
                 </form>
             </div>
@@ -66,68 +70,61 @@
             <div class="carousel-item active">
                 <!-- img-fluid encaixa no tamanho q foi separado para ela -->
                 <!-- esconde a imagem qnd for md -->
-               <img class="img-fluid d-md-none" src="./assets/Mobile/banner1-mobile.png" alt="modelo feminina">
-               <!-- d-none fica com o display escondido  -->
-               <!-- d-md-block quando a tela for md a imagem irá aparecer -->
-               <img class="img-fluid d-none d-md-block d-xl-none" src="./assets/Tablet/banner1-tablet.png" alt="modelo feminina">
-               <img class="img-fluid d-none d-xl-block" src="./assets/Desktop/banner1-desktop.png" alt="modelo feminina">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+                <img class="img-fluid d-md-none" src="./assets/Mobile/banner1-mobile.png" alt="modelo feminina">
+                <!-- d-none fica com o display escondido  -->
+                <!-- d-md-block quando a tela for md a imagem irá aparecer -->
+                <img class="img-fluid d-none d-md-block d-xl-none" src="./assets/Tablet/banner1-tablet.png"
+                    alt="modelo feminina">
+                <img class="img-fluid d-none d-xl-block" src="./assets/Desktop/banner1-desktop.png"
+                    alt="modelo feminina">
+            </div>
+            <div class="carousel-item position-relative">
+                <img class="img-fluid d-md-none" src="./assets/Mobile/banner2-mobile.png" alt="banner 2">
+                <img class="img-fluid d-none d-md-block d-xl-none" src="./assets/Tablet/banner2-tablet.png"
+                    alt="banner 2">
+                <img class="img-fluid d-none d-xl-block" src="./assets/Desktop/banner2-desktop.png" alt="banner 2">
+                <div class="carousel-caption position-absolute">
+                    <h5 class="fs-1">Second slide label</h5>
+                    <p class="fs-4">Some representative placeholder content for the second slide.</p>
                 </div>
             </div>
-            <div class="carousel-item">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
-                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide"
-                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444"
-                        dy=".3em">Second slide</text>
-                </svg>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
-                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide"
-                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333"
-                        dy=".3em">Third slide</text>
-                </svg>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
+            <div class="carousel-item position-relative">
+                <img class=" w-100 img-fluid d-md-none" src="./assets/Mobile/banner3-mobile.png" alt="banner 3">
+                <img class=" w-100 img-fluid d-none d-md-block d-xl-none" src="./assets/Tablet/banner3-tablet.png"
+                    alt="banner 3">
+                <img class=" w-100 img-fluid d-none d-xl-block" src="./assets/Desktop/banner3-desktop.png"
+                    alt="banner 3">
+                <!-- position-absolute  -->
+                <div class="carousel-caption position-absolute">
+                    <!-- fs-1 é o tamanho da letra. está no text na documentação -->
+                    <h5 class="fs-1">COLEÇÃO ATEMPORAL</h5>
+                    <p class="fs-4">Estilo e qualidade para durar.</p>
                 </div>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
             data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <!-- acessibilidade -->
+            <span class="visually-hidden">Anterior</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
             data-bs-slide="next">
+            <!-- acessibilidade -->
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span class="visually-hidden">Próximo</span>
         </button>
     </div>
 
-    <h2 class="text-center">Busque por categoria:</h2>
+    <h2 class="text-center my-3 my-xl-5">Busque por categoria:</h2>
     <!-- Coloca o container em linhas row, depois colocar o espaçamento centralizado mx e grid(divisao) em 4 -->
     <div class="container row mx-auto g-4">
         <!-- coloca como você quer a distribuição, col-breakpoint-divisao-->
         <div class="col-6 col-md-4 col-xxl-2">
-            <div class="card">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="180"
-                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap"
-                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
-                        dy=".3em">Image cap</text>
-                </svg>
+            <div class="card rounded-0 border-0">
+                <img class="d-md-none d-block" src="./assets/Mobile/categorias/categoria-camiseta.png" alt="camiseta">
+                <img class="d-none d-md-block d-xl-none" src="./assets/Tablet/categorias/categoria-camiseta.png" alt="camiseta">
+                <img class="d-none d-xl-block" src="./assets/Desktop/categorias/categoria-camiseta.png" alt="camiseta">
                 <div class="card-header bg-black text-bg-dark">
                     <p class="text-center card-text">Categoria</p>
                 </div>
@@ -219,7 +216,8 @@
     </div>
 
 
-    <h2 class="text-center">Produto que estão bombando</h2>
+    <!-- container ajusta a imagem aos lados -->
+    <h2 class=" container my-3 my-xl-5">Produtos que estão bombando</h2>
     <div class="container row mx-auto g-4">
         <div class="col-12 col-md-6 col-xl-4">
             <div class="card">
@@ -374,18 +372,20 @@
         <!-- text-center centraliza os textos -->
         <!-- css width largura -->
     </section>
-    <form class="border border-secondary m-3 p-3 text-center div-novidades mx-auto">
+    <form class="border border-secondary my-3 my-xl-5 p-3 text-center div-novidades mx-auto">
         <h5>Quer receber nossas novidades, promoções exclusivas e 10% OFF na primeira compra? Cadastre-se!</h5>
         <div class="input-group my-3">
-          <input type="email" class="form-control border-secondary rounded-0" placeholder="Digite seu e-mail" aria-label="Digite seu e-mail" aria-describedby="button-addon2" /> 
-    <button type="button" id="button-addon2">Enviar</button>
+            <input type="email" class="form-control border-secondary rounded-0" placeholder="Digite seu e-mail"
+                aria-label="Digite seu e-mail" aria-describedby="button-addon2" />
+            <button type="button" id="button-addon2">Enviar</button>
         </div>
-      </form>
+    </form>
 
-      <!-- text-bg-cor -->
+    <!-- text-bg-cor -->
     <footer class="text-center bg-black text-bg-dark">
         <!-- icone -->
-        <p class="py-3">2023 <i class="bi bi-c-circle"></i> Desenvolvido por Alura | Projeto fictício sem fins comerciais.</p>
+        <p class="py-3">2023 <i class="bi bi-c-circle"></i> Desenvolvido por Alura | Projeto fictício sem fins
+            comerciais.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
